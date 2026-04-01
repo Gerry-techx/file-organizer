@@ -2,35 +2,54 @@
 # File ini ibarat "kamus" buat si organizer
 # Di sini kita atur: ekstensi file apa masuk ke folder mana
 
-FILE_CATEGORIES = {                          # Bikin dictionary (kamus) kategori file
-    "Images": [                              # Kalau ekstensinya salah satu di bawah ini → masuk folder "Images"
+FILE_CATEGORIES = {
+    "Images": [                              # File gambar/foto
         ".jpg", ".jpeg", ".png",
-        ".gif", ".svg", ".webp", ".bmp"
+        ".gif", ".svg", ".webp",
+        ".bmp", ".ico", ".tiff"
     ],
-    "Videos": [                              # Kalau video → masuk folder "Videos"
+    "Videos": [                              # File video
         ".mp4", ".mkv", ".avi",
-        ".mov", ".wmv", ".flv"
+        ".mov", ".wmv", ".flv",
+        ".webm", ".m4v"
     ],
-    "Documents": [                           # Dokumen → masuk folder "Documents"
+    "Documents": [                           # File dokumen
         ".pdf", ".docx", ".doc",
         ".xlsx", ".xls", ".pptx",
-        ".txt", ".csv"
+        ".ppt", ".txt", ".csv",
+        ".odt", ".ods", ".odp"
     ],
-    "Music": [                               # Musik/audio → masuk folder "Music"
+    "Music": [                               # File audio/musik
         ".mp3", ".wav", ".flac",
-        ".aac", ".ogg", ".m4a"
+        ".aac", ".ogg", ".m4a",
+        ".wma", ".opus"
     ],
-    "Archives": [                            # File zip/rar dll → masuk folder "Archives"
+    "Archives": [                            # File terkompresi
         ".zip", ".rar", ".tar",
-        ".gz", ".7z"
+        ".gz", ".7z", ".bz2",
+        ".xz", ".tar.gz"
     ],
-    "Code": [                                # File kode program → masuk folder "Code"
+    "Code": [                                # File kode program
         ".py", ".js", ".html",
         ".css", ".json", ".ts",
-        ".java", ".cpp", ".c"
+        ".java", ".cpp", ".c",
+        ".jsx", ".tsx", ".php",
+        ".rb", ".go", ".rs",
+        ".md", ".yaml", ".yml",
+        ".xml", ".sql", ".sh"
     ],
-    "Others": []                             # Kalau ekstensinya gak ada di atas → masuk "Others"
+    "Installers": [                          # BARU! File installer aplikasi
+        ".exe", ".msi", ".dmg",
+        ".pkg", ".deb", ".rpm",
+        ".appimage", ".run"
+    ],
+    "Fonts": [                               # BARU! File font/huruf
+        ".ttf", ".otf", ".woff",
+        ".woff2", ".eot"
+    ],
+    "Others": []                             # Kalau gak ada yang cocok → masuk sini
 }
+
 
 # Fungsi ini tugasnya: cari tahu, file ini masuk kategori apa?
 def get_category(file_extension):
